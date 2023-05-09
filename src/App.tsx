@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import Row from './components/Row';
+import Header from './components/Header';
+import { supabase } from './components/Supabase';
+import { Review } from './types/Review';
 import './App.css';
 
+
 function App() {
+
+  const [first, setFirst] = useState<boolean>(true)    
+  const [data, setData] = useState<undefined | Review[]>(undefined)
+
+  useEffect(() => {
+    if (first)
+    {
+    supabase
+    .from('Data')
+    .select('*')
+    .then((response: any) => {
+      setData(response.data)
+    })
+    setFirst(false)
+    }
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="List">
+        {
+          data !== undefined ? 
+            data.map((review: Review) => (<Row Review={review} key={review.id} />)) : 
+            <></>
+        }
+      </div>
     </div>
   );
 }
 
 export default App;
+
