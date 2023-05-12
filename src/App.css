@@ -3,43 +3,41 @@
   flex-direction: column;
   text-align: center;
   background-color: #393232;
+  align-items: center;
   height: 100vh;
-  font-family: 'Courier New', Courier, monospace;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-family: 'Times New Roman', Times, serif;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow-y: hidden;
 }
 
 .Header {
   display: flex;
-  margin-top: 70px;
-  margin-left: 20vh;
-  margin-right: 20vh;
-  text-align: center;
+  width: 120vh;
   font-size: xx-large;
-  background-color: white;
-  height: 200px;
+  /* background-color: white; */
+  height: 120px;
+  color: #DBD8E3;
+  justify-content: space-evenly;
+  font-family: "Comfortaa";
+  font-weight: 500;
+
 }
 
 .List {
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
-  margin-left: 40vh;
-  margin-right: 40vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100vh;
   min-width: 820px;
   text-align: center;
   background-color: green;
+  height: 100vh - 170px;
+  overflow-y: scroll;
 }
 
 .Row {
   display: flex;
   text-align: center;
-  background-color: green;
-  height: 200px;
+  min-height: 400px;
 }
 
 .App-header {
@@ -53,17 +51,20 @@
   color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2f2828; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #DBD8E3; 
+  border-radius: 10px;
 }
