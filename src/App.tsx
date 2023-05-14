@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Row from './components/Row';
 import Header from './components/Header';
 import { supabase } from './components/Supabase';
 import { Review } from './types/Review';
@@ -17,6 +16,7 @@ function App() {
     supabase
     .from('Data')
     .select('*')
+    .order('total_score', { ascending: false })
     .then((response: any) => {
       setData(response.data)
     })
@@ -27,13 +27,27 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="List">
-        {
-          data !== undefined ? 
-            data.map((review: Review) => (<Row Review={review} key={review.id} />)) : 
-            <></>
-        }
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Category</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data !== undefined ? 
+            data.map((review: Review) => (
+              <tr key={review.id}>
+                <td>{review.name}</td>
+                <td>{review.total_score}</td>
+                <td>{review.category}</td>
+                <td>{review.comment}</td>
+              </tr>
+          )) : <></>}
+        </tbody>
+      </table>
     </div>
   );
 }

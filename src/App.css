@@ -1,54 +1,56 @@
 .App {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: #393232;
-  align-items: center;
   height: 100vh;
-  overflow-y: hidden;
-}
-
-.Header {
-  display: flex;
-  width: 120vh;
-  font-size: xx-large;
-  /* background-color: white; */
-  height: 120px;
-  color: #DBD8E3;
-  justify-content: space-evenly;
-  font-family: "Comfortaa";
-  font-weight: 500;
-
-}
-
-.List {
+  width: 100vw;
+  background-color: #393232;
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width: 100vh;
-  min-width: 820px;
-  text-align: center;
-  background-color: green;
-  height: 100vh - 170px;
+  align-items: center;
   overflow-y: scroll;
 }
 
-.Row {
+.Header {
+  height: 120px;
+  width: 80vw;
+  margin-top: 25px;
   display: flex;
-  text-align: center;
-  min-height: 400px;
+  justify-content: space-evenly;
+  font-family: "Comfortaa";
+  color: #DBD8E3;
+  font-size: xx-large;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+table {
+  height: 100%;
+  width: 50vw;
+  min-width: 820px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  font-family: "Comfortaa";
+  color: #DBD8E3;
+}
+
+tr {
+  width: auto;
+  /* display: flex;
+  flex-direction: row; */
+  /* justify-content: space-evenly; */
+}
+
+th {
+  width: auto;
+  /* width: 100%; */
+  /* border-bottom: 0.5px solid #DBD8E3; */
+  /* border: 2px solid black;
+  border-bottom: 1px solid #ddd; */
+}
+
+td {
+  width: auto;
+  height: 200px;
+  /* width: 100%; */
+  /* display: flex; */
+  /* text-align: center; */
+  /* border: 2px solid black; */
 }
 
 /* width */
