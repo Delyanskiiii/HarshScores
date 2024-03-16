@@ -1,56 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import Header from './components/Header';
-import { supabase } from './components/Supabase';
-import { Review } from './types/Review';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import { Review } from './Review';
+import Reviews from './Reviews.json';
 import './App.css';
 
 
 function App() {
-
-  const [first, setFirst] = useState<boolean>(true)    
-  const [data, setData] = useState<undefined | Review[]>(undefined)
-
-  useEffect(() => {
-    if (first)
-    {
-    supabase
-    .from('Data')
-    .select('*')
-    .order('total_score', { ascending: false })
-    .then((response: any) => {
-      setData(response.data)
-    })
-    setFirst(false)
-    }
-  });
-
   return (
     <div className="App">
-      <Header />
-      <table>
-        <thead>
-          <tr>
+      <div className="Screen">
+        <Header Headline='Harsh'/>
+        <table>
+          <thead>
             <th>Name</th>
             <th>Score</th>
             <th>Category</th>
-            <th>Comment</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data !== undefined ? 
-            data.map((review: Review) => (
-              <tr key={review.id}>
+          </thead>
+          <tbody>
+            {Reviews.map((review: any) => (
+              <tr key={review.name}>
                 <td>{review.name}</td>
-                <td>{review.total_score}</td>
+                <td>{review.score}</td>
                 <td>{review.category}</td>
-                <td>{review.comment}</td>
               </tr>
-          )) : <></>}
-        </tbody>
-      </table>
+            ))}
+          </tbody>
+        </table>
+        <Footer Headline='Harsh'/>
+      </div>
     </div>
   );
 }
 
 export default App;
-

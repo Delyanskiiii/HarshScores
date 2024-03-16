@@ -1,0 +1,32 @@
+[
+    {
+        "name": "The Fellowship Of The Ring",
+        "score": 8,
+        "category": "Movie"
+    },
+    {
+        "name": "The Two Towers",
+        "score": 8,
+        "category": "Movie"
+    },
+    {
+        "name": "The Return Of the King",
+        "score": 8,
+        "category": "Movie"
+    },
+    {
+        "name": "Barbie",
+        "score": 3,
+        "category": "Movie"
+    },
+    {
+        "name": "Game Of Thrones",
+        "score": 8,
+        "category": "Series"
+    },
+    {
+        "name": "West World",
+        "score": 8,
+        "category": "Series"
+    }
+]

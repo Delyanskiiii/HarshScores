@@ -4,7 +4,7 @@ interface ChildProps {
   Headline: string;
 }
 
-const Header: React.FC<ChildProps> = ({ Headline }) => {
+const Footer: React.FC<ChildProps> = ({ Headline }) => {
   return (
     <div className="Header">
       <p>
@@ -14,4 +14,4 @@ const Header: React.FC<ChildProps> = ({ Headline }) => {
   );
 }
 
-export default Header;
+export default Footer;
