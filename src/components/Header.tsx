@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ contentOptions, onContentChange }) => {
     return (
         <div className="Header">
             {contentOptions.map((option) => (
-                <button className="HeaderButton" onClick={() => handleClick(option)}>
+                <button className="HeaderButton" key={option} onClick={() => handleClick(option)}>
                     {option}
                 </button>
             ))}

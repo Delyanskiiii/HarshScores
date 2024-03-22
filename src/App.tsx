@@ -12,9 +12,11 @@ interface ContentData {
 const App: React.FC = () => {
 
     const contentData: ContentData = {
-        About: "This is the content for Option 1. You can add any HTML here.",
-        Impact: "This is the content for Option 2. This can be anything you want to display.",
-        Bernard: "This is the content for Option 3. Change this content to reflect your needs.",
+        About: "About",
+        Impact: "Impact",
+        Bernard: "Bernard",
+        Scores: "Scores",
+        Oneshot: "Oneshot",
       };
 
       const [selectedContent, setSelectedContent] = useState(contentData.option1);
@@ -27,7 +29,7 @@ const App: React.FC = () => {
         <div className="App">
             <div className="Screen">
                 <Header
-                    contentOptions={["About", "Impact", "Bernard"]}
+                    contentOptions={["About", "Bernard", "Scores", "Oneshot", "Impact"]}
                     onContentChange={handleContentChange}
                 />
                 <Content Reviews={selectedContent} />

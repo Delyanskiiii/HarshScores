@@ -17,21 +17,25 @@
 }
 
 .Header {
-    height: 120px;
+    height: 100px;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
 }
 
 .HeaderButton {
     background-color: #333;
+    font-weight: 900;
+    height: fit-content;
     font-family: "Comfortaa";
     color: #DBD8E3;
     font-size: xx-large;
+    border: 0px;
 }
 
 .Content {
-    height: calc(100vh - 240px);
+    height: calc(100vh - 200px);
     width: 100%;
     /* background-color: yellow; */
     display: flex;
@@ -43,7 +47,7 @@
 }
 
 .Footer {
-    height: 120px;
+    height: 100px;
     width: 100%;
     /* background-color: blue; */
     display: flex;
