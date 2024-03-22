@@ -1,9 +1,7 @@
 .App {
     height: 100vh;
     width: 100vw;
-
     background-color: #333;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,9 +19,12 @@
 .Header {
     height: 120px;
     width: 100%;
-    /* background-color: blue; */
     display: flex;
     justify-content: space-evenly;
+}
+
+.HeaderButton {
+    background-color: #333;
     font-family: "Comfortaa";
     color: #DBD8E3;
     font-size: xx-large;
@@ -49,7 +50,7 @@
     justify-content: space-evenly;
     font-family: "Comfortaa";
     color: #DBD8E3;
-    font-size: xx-large;
+    font-size: large;
 }
 
 .Wrapper {

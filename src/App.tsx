@@ -12,9 +12,9 @@ interface ContentData {
 const App: React.FC = () => {
 
     const contentData: ContentData = {
-        option1: "This is the content for Option 1. You can add any HTML here.",
-        option2: "This is the content for Option 2. This can be anything you want to display.",
-        option3: "This is the content for Option 3. Change this content to reflect your needs.",
+        About: "This is the content for Option 1. You can add any HTML here.",
+        Impact: "This is the content for Option 2. This can be anything you want to display.",
+        Bernard: "This is the content for Option 3. Change this content to reflect your needs.",
       };
 
       const [selectedContent, setSelectedContent] = useState(contentData.option1);
@@ -27,16 +27,13 @@ const App: React.FC = () => {
         <div className="App">
             <div className="Screen">
                 <Header
-                    contentOptions={Object.entries(contentData).map(([value, label]) => ({
-                    value,
-                    label,
-                    }))}
+                    contentOptions={["About", "Impact", "Bernard"]}
                     onContentChange={handleContentChange}
                 />
                 <Content Reviews={selectedContent} />
                 {/* <Header Headline='Harsh' />
-                <Content Reviews={Reviews} />
-                <Footer Headline='Harsh' /> */}
+                <Content Reviews={Reviews} /> */}
+                <Footer Headline='Delyan Banev' />
             </div>
         </div>
     );
