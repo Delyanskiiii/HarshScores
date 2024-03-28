@@ -49,12 +49,25 @@
 .Footer {
     height: 100px;
     width: 100%;
-    /* background-color: blue; */
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.FooterWrapper {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     font-family: "Comfortaa";
     color: #DBD8E3;
-    font-size: large;
+    font-size: medium;
+}
+
+.Icon {
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #DBD8E3;
 }
 
 .Wrapper {

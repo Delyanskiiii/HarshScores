@@ -19,7 +19,7 @@ const App: React.FC = () => {
         Oneshot: "Oneshot",
       };
 
-      const [selectedContent, setSelectedContent] = useState(contentData.option1);
+      const [selectedContent, setSelectedContent] = useState(contentData.About);
 
       const handleContentChange = (value: string) => {
         setSelectedContent(contentData[value]);
