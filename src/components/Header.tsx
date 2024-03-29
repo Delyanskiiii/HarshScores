@@ -7,14 +7,17 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ contentOptions, onContentChange }) => {
 
-    const handleClick = (option: string) => {
+    const [selectedContent, setSelectedContent] = useState(0);
+
+    const handleClick = (option: string, index: number) => {
         onContentChange(option);
+        setSelectedContent(index);
     };
 
     return (
         <div className="Header">
-            {contentOptions.map((option) => (
-                <button className="HeaderButton" key={option} onClick={() => handleClick(option)}>
+            {contentOptions.map((option, index) => (
+                <button className={`${selectedContent === index ? 'HeaderButtonSelected' : 'HeaderButton'}`} onClick={() => handleClick(option, index)}>
                     {option}
                 </button>
             ))}

@@ -9,7 +9,7 @@
 
 .Screen {
     height: 100vh;
-    max-width: 1000px;
+    max-width: 800px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -26,11 +26,29 @@
 
 .HeaderButton {
     background-color: #333;
+    height: 60px;
+    width: 160px;
     font-weight: 900;
-    height: fit-content;
+    font-family: "Comfortaa";
+    color: #444;
+    font-size: x-large;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.HeaderButton:hover {
+    transform: scale(1.1);
+  }
+
+.HeaderButtonSelected {
+    background-color: #333;
+    height: 60px;
+    width: 160px;
+    font-weight: 900;
     font-family: "Comfortaa";
     color: #DBD8E3;
     font-size: xx-large;
+    border-radius: 10px;
     border: 0px;
 }
 

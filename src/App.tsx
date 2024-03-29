@@ -2,21 +2,20 @@ import React, { useState } from 'react';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Content from './Components/Content';
-import Reviews from './Reviews.json';
 import './App.css';
 
 interface ContentData {
-    [key: string]: string; // Dynamic content object structure
+    [key: string]: string;
   }
 
 const App: React.FC = () => {
 
     const contentData: ContentData = {
-        About: "About",
-        Impact: "Impact",
-        Bernard: "Bernard",
-        Scores: "Scores",
-        Oneshot: "Oneshot",
+        About: "Dylan from fucking Fyllar",
+        Bernard: "That's enough, Bernard",
+        // Impact: "Impact",
+        // Scores: "Scores",
+        Oneshot: "Male kak shte dmvam",
       };
 
       const [selectedContent, setSelectedContent] = useState(contentData.About);
@@ -29,12 +28,10 @@ const App: React.FC = () => {
         <div className="App">
             <div className="Screen">
                 <Header
-                    contentOptions={["About", "Bernard", "Scores", "Oneshot", "Impact"]}
+                    contentOptions={Object.keys(contentData)}
                     onContentChange={handleContentChange}
                 />
                 <Content Reviews={selectedContent} />
-                {/* <Header Headline='Harsh' />
-                <Content Reviews={Reviews} /> */}
                 <Footer Headline='Delyan Banev' />
             </div>
         </div>
