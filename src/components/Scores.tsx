@@ -1,16 +1,11 @@
 import React from 'react';
 import { Review } from '../Review';
+import Reviews from '../Reviews.json'
 
-interface ChildProps {
-    Reviews: string;
-    // Reviews: Review[];
-}
-
-const Content: React.FC<ChildProps> = ({ Reviews }) => {
+const Scores: React.FC = () => {
     return (
         <div className='Content'>
-            {Reviews}
-            {/* <div className='Wrapper'>
+            <div className='TableWrapper'>
                 <table>
                     <thead>
                         <th>Name</th>
@@ -27,9 +22,9 @@ const Content: React.FC<ChildProps> = ({ Reviews }) => {
                         ))}
                     </tbody>
                 </table>
-            </div> */}
+            </div>
         </div>
     );
 }
 
-export default Content;
+export default Scores;

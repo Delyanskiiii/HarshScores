@@ -26,9 +26,6 @@ const Header: React.FC<HeaderProps> = ({ contentOptions, onContentChange }) => {
                 >
                     {option}
                 </motion.button>
-                // <button className={`${selectedContent === index ? 'HeaderButtonSelected' : 'HeaderButton'}`} onClick={() => handleClick(option, index)}>
-                //     {option}
-                // </button>
             ))}
         </div>
     );

@@ -1,11 +1,11 @@
 import React from 'react';
 import { CodeBracketIcon, LinkIcon, InboxIcon } from '@heroicons/react/24/outline';
 
-interface ChildProps {
+interface FooterProps {
     Headline: string;
 }
 
-const Footer: React.FC<ChildProps> = ({ Headline }) => {
+const Footer: React.FC<FooterProps> = ({ Headline }) => {
     const mailtoLink = `mailto:delyanbanev@gmail.com`;
 
     return (

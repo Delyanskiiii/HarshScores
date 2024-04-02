@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import Content from './Components/Content';
+import About from './Components/About';
+import Bernard from './Components/Bernard';
+import Scores from './Components/Scores';
 import './App.css';
 
 interface ContentData {
-    [key: string]: string;
+    [key: string]: ReactElement;
   }
 
 const App: React.FC = () => {
 
     const contentData: ContentData = {
-        About: "Dylan from fucking Fyllar",
-        Bernard: "That's enough, Bernard",
-        // Impact: "Impact",
-        // Scores: "Scores",
-        Oneshot: "Male kak shte dmvam",
+        About: <About />,
+        Bernard: <Bernard />,
+        // Impact: <Impact />,
+        Scores: <Scores />,
+        // Oneshot: <Oneshot />,
       };
 
       const [selectedContent, setSelectedContent] = useState(contentData.About);
@@ -31,7 +33,7 @@ const App: React.FC = () => {
                     contentOptions={Object.keys(contentData)}
                     onContentChange={handleContentChange}
                 />
-                <Content Reviews={selectedContent} />
+                {selectedContent}
                 <Footer Headline='Delyan Banev' />
             </div>
         </div>
