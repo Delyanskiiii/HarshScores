@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from "framer-motion"
 
 interface HeaderProps {
     contentOptions: string[];
@@ -17,9 +18,17 @@ const Header: React.FC<HeaderProps> = ({ contentOptions, onContentChange }) => {
     return (
         <div className="Header">
             {contentOptions.map((option, index) => (
-                <button className={`${selectedContent === index ? 'HeaderButtonSelected' : 'HeaderButton'}`} onClick={() => handleClick(option, index)}>
+                <motion.button
+                className={`${selectedContent === index ? 'HeaderButtonSelected' : 'HeaderButton'}`}
+                    whileHover={{ scale: 1.1, backgroundColor: '#292929' }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => handleClick(option, index)}
+                >
                     {option}
-                </button>
+                </motion.button>
+                // <button className={`${selectedContent === index ? 'HeaderButtonSelected' : 'HeaderButton'}`} onClick={() => handleClick(option, index)}>
+                //     {option}
+                // </button>
             ))}
         </div>
     );

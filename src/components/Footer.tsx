@@ -11,13 +11,13 @@ const Footer: React.FC<ChildProps> = ({ Headline }) => {
     return (
         <div className="Footer">
             <div className="FooterWrapper">
-                <a href="https://github.com/Delyanskiiii" target="_blank">
+                <a href="https://github.com/Delyanskiiii" target="_blank" rel="noreferrer">
                     <CodeBracketIcon className="Icon" />
                 </a>
-                <a href="https://linkedin.com/in/delyan-banev-68893a231" target="_blank">
+                <a href="https://linkedin.com/in/delyan-banev-68893a231" target="_blank" rel="noreferrer">
                     <LinkIcon className="Icon" />
                 </a>
-                <a href={mailtoLink} target="_blank">
+                <a href={mailtoLink} target="_blank" rel="noreferrer">
                     <InboxIcon className="Icon" />
                 </a>
             </div>

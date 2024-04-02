@@ -30,14 +30,15 @@
     width: 160px;
     font-weight: 900;
     font-family: "Comfortaa";
-    color: #444;
+    color: #666;
     font-size: x-large;
-    border-radius: 10px;
+    border-radius: 16px;
     border: 0px;
 }
 
 .HeaderButton:hover {
     transform: scale(1.1);
+    color: #DBD8E3;
   }
 
 .HeaderButtonSelected {
@@ -47,21 +48,19 @@
     font-weight: 900;
     font-family: "Comfortaa";
     color: #DBD8E3;
-    font-size: xx-large;
-    border-radius: 10px;
+    font-size: x-large;
+    border-radius: 16px;
     border: 0px;
 }
 
 .Content {
     height: calc(100vh - 200px);
     width: 100%;
-    /* background-color: yellow; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-family: "Comfortaa";
     color: #DBD8E3;
-    /* font-size: xx-large; */
 }
 
 .Footer {
