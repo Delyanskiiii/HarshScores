@@ -34,7 +34,7 @@ const App: React.FC = () => {
                     onContentChange={handleContentChange}
                 />
                 {selectedContent}
-                <Footer Headline='Delyan Banev' />
+                <Footer />
             </div>
         </div>
     );
