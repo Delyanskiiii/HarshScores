@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ contentOptions, onContentChange }) => {
             {contentOptions.map((option, index) => (
                 <motion.button
                     className={`${selectedContent === index ? 'HeaderButtonSelected' : 'HeaderButton'}`}
-                    whileHover={{ scale: 1.1, backgroundColor: '#303030', color: '#DBD8E3' }}
+                    whileHover={{ scale: 1.1, backgroundColor: '#303030' }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => handleClick(option, index)}
                 >
